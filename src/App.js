@@ -55,7 +55,7 @@ function App() {
       placeholder:"Confirm Password",
       errorMessage:"confirm password should be same as password  ",
       label:"Confirm Password",
-      // pattern:values.password,
+      pattern:values.password,
       required:true
     },
   
@@ -78,7 +78,7 @@ function App() {
   console.log(username);
   const hitAPI=()=>{
     const apiUrl ='http://localhost:3001/user/register';
-    fetch(apiUrl,{method:"POST",body:JSON.stringify({username,email,password,confirmPassword}),withCredentials: true,crossDomain:true,headers: {
+    fetch(apiUrl,{method:"POST",body:JSON.stringify({username,email,BirthDate,password,confirmPassword}),withCredentials: true,crossDomain:true,headers: {
       'Content-type': 'application/json; charset=UTF-8',
       "Access-Control-Allow-Origin":"*",
       "Accept":'application/json'
